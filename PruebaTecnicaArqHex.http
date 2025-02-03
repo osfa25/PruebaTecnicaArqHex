@@ -1,0 +1,6 @@
+@PruebaTecnicaArqHex_HostAddress = http://localhost:5136
+
+GET {{PruebaTecnicaArqHex_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
