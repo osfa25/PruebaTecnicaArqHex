@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebaTecnicaArqHex")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31548d86f64ab2c5768925dea27e5aeea8359401")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2401f85579437ec432fabb73bacc94d82ee8b70")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebaTecnicaArqHex")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebaTecnicaArqHex")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
