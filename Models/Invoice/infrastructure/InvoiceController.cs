@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaArqHex.Data;
-using PruebaTecnicaArqHex.Models.Invoices.domain.dto;
 using PruebaTecnicaArqHex.Models.Invoices.domain.entities;
+using PruebaTecnicaShared;
 
 
 [Authorize]
@@ -39,7 +39,7 @@ using PruebaTecnicaArqHex.Models.Invoices.domain.entities;
         }
 
         [HttpPost]
-        public IActionResult AddInvoice(InvoiceAddDTO invoiceAddDTO)
+        public IActionResult AddInvoice(InvoiceDTO invoiceAddDTO)
         {
             var client = dbContext.Clients.Find(invoiceAddDTO.ClientID);
 
@@ -62,7 +62,7 @@ using PruebaTecnicaArqHex.Models.Invoices.domain.entities;
 
     [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult UpdateInvoice(Guid id, InvoiceUpdateDTO invoiceUpdateDTO)
+        public IActionResult UpdateInvoice(Guid id, InvoiceDTO invoiceUpdateDTO)
         {
             var invoice = dbContext.Invoices.Find(id);
 

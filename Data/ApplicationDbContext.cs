@@ -14,8 +14,8 @@ namespace PruebaTecnicaArqHex.Data
         public DbSet<Client> Clients { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Invoices> Invoices { get; set; }
-        public DbSet<Products> Products { get; set; } // Agregado
-        public DbSet<InvoiceDetail> InvoiceDetails { get; set; } // Agregado
+        public DbSet<Products> Products { get; set; }
+        public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

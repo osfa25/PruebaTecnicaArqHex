@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaArqHex.Data;
-using PruebaTecnicaArqHex.Models.Clients.domain.dto;
 using PruebaTecnicaArqHex.Models.Clients.domain.entities;
+using PruebaTecnicaShared;
 
 namespace PruebaTecnicaArqHex.Models.Clients.infrasctucture
 {
@@ -43,7 +43,7 @@ namespace PruebaTecnicaArqHex.Models.Clients.infrasctucture
         }
 
         [HttpPost]
-        public IActionResult AddClient(ClientAddDTO clientAddDTO)
+        public IActionResult AddClient(ClientDTO clientAddDTO)
         {
             var clientEntity = new Client()
             {
@@ -58,7 +58,7 @@ namespace PruebaTecnicaArqHex.Models.Clients.infrasctucture
 
         [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult UpdateClient(Guid id, ClientUpdateDTO clientUpdateDTO)
+        public IActionResult UpdateClient(Guid id, ClientDTO clientUpdateDTO)
         {
             var client = dbContext.Clients.Find(id);
 

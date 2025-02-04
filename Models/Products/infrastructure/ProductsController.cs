@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaArqHex.Data;
-using PruebaTecnicaArqHex.Models.Products.domain.dto;
+using PruebaTecnicaShared;
 
 namespace PruebaTecnicaArqHex.Models.Products.infrastructure
 {
@@ -39,7 +39,7 @@ namespace PruebaTecnicaArqHex.Models.Products.infrastructure
         }
 
         [HttpPost]
-        public IActionResult AddProduct(ProductsAddDTO productsAddDTO)
+        public IActionResult AddProduct(ProductDTO productsAddDTO)
         {
             var productEntity = new domain.entities.Products()
             {
@@ -55,7 +55,7 @@ namespace PruebaTecnicaArqHex.Models.Products.infrastructure
 
         [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult UpdateProduct(Guid id, ProductsUpdateDTO productsUpdateDTO)
+        public IActionResult UpdateProduct(Guid id, ProductDTO productsUpdateDTO)
         {
             var product = dbContext.Products.Find(id);
 

@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaArqHex.Data;
-using PruebaTecnicaArqHex.Models.InvoiceDetail.domain.dto;
+using PruebaTecnicaShared;
 
-    [Authorize]
+
+[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class InvoiceDetailController : ControllerBase
@@ -37,7 +38,7 @@ using PruebaTecnicaArqHex.Models.InvoiceDetail.domain.dto;
         }
 
     [HttpPost]
-    public IActionResult AddInvoiceDetail(InvoiceDetailAddDTO invoiceDetailAddDTO)
+    public IActionResult AddInvoiceDetail(InvoiceDetailDTO invoiceDetailAddDTO)
     {
         
         var invoice = dbContext.Invoices.Find(invoiceDetailAddDTO.InvoiceID);
@@ -64,7 +65,7 @@ using PruebaTecnicaArqHex.Models.InvoiceDetail.domain.dto;
 
     [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult UpdateInvoiceDetail(Guid id, InvoiceDetailUpdateDTO invoiceDetailUpdateDTO)
+        public IActionResult UpdateInvoiceDetail(Guid id, InvoiceDetailDTO invoiceDetailUpdateDTO)
         {
             var invoiceDetail = dbContext.InvoiceDetails.Find(id);
 
